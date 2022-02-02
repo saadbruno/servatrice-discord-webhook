@@ -1,0 +1,5 @@
+JOIN="$PLAYER entrou no servidor!"
+LEAVE="$PLAYER saiu do servidor... :("
+CREATEROOM="Sala criada!"
+NAME="Nome"
+NUMBER_OF_PLAYERS="Número de jogadores"

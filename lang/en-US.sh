@@ -1,0 +1,5 @@
+JOIN="$PLAYER joined the server!"
+LEAVE="$PLAYER left the server... :("
+CREATEROOM="A game was created!"
+NAME="Name"
+NUMBER_OF_PLAYERS="Number of players"
