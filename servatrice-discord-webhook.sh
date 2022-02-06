@@ -114,6 +114,13 @@ tail -n 0 -F $SERVERLOG/servatrice.log | while read LINE; do
     *Command_CreateGame*)
         ROOM=$(echo "$LINE" | cut -d '"' -f2)
         PLAYERS=$(echo "$LINE" | grep -oP '(?<=max_players: )[0-9]+')
+
+        # room names can be empty, so we account for it
+        if [ -z "$ROOM" ]
+            then
+                ROOM="---"
+        fi
+
         source $LANGFILE
         echo "Room $ROOM created. Sending webhook..."
         webhook_createroom "$CREATEROOM" "$ROOM" "$PLAYERS" 10113475
